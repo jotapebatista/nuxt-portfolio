@@ -2,24 +2,21 @@
 	<div
 		class="h-screen w-screen bg-gradient-to-b from-slate-200 to-emerald-200 dark:from-slate-900 dark:to-blue-950"
 	>
-		<div class="absolute top-4 right-4 z-10">
-			<button
-				@click="toggleDarkMode"
-				class="text-white hover:text-emerald-500"
-			>
-				<Icon
-					:name="darkMode ? 'uil:sun' : 'uil:moon'"
-					class="h-6 w-6"
-				/>
-			</button>
+		<div class="fixed w-full top-0 z-20">
+			<Menu
+				:menuItems="[
+					{ label: 'Home', to: '/' },
+					{ label: 'About', to: '/about' },
+					{ label: 'Projects', to: '/projects' },
+				]"
+			/>
 		</div>
-		<div class="fixed w-full">
-			<Menu />
-		</div>
-		
 
-		<SocialLinks :elements="socialLinks" />
-		<slot />
+		<!-- Content below the fixed menu -->
+		<div class="pt-16">
+			<SocialLinks :elements="socialLinks" />
+			<slot />
+		</div>
 	</div>
 </template>
 
@@ -31,28 +28,19 @@ const downloadCV = () => {
 	link.click();
 };
 
-const darkMode = ref(false);
-
-const toggleDarkMode = () => {
-	darkMode.value = !darkMode.value;
-	if (darkMode.value) {
-		document.documentElement.classList.add("dark");
-	} else {
-		document.documentElement.classList.remove("dark");
-	}
-};
-
 const socialLinks = [
 	{
 		icon: "uil:github",
 		color: "emerald",
 		url: "https://github.com/jotapebatista",
+		name: "Github"
 	},
 	{
 		icon: "uil:linkedin",
 		color: "emerald",
 		url: "https://linkedin.com/in/jotapebatista",
+		name: "LinkedIn"
 	},
-	{ icon: "uil:file-download", color: "emerald", callback: downloadCV },
+	{ icon: "uil:file-download", color: "emerald", callback: downloadCV, name:"CV" },
 ];
 </script>

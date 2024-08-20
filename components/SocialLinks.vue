@@ -7,15 +7,15 @@
 				class="cursor-pointer"
 				@click="handleClick(element)"
 			>
-				<Icon
-					:name="element.icon"
-					:class="`text-${element.color}-400 h-6 w-6`"
-				/>
+				<UTooltip :text="element.name" :popper="{ placement: 'right-end' }">
+					<Icon
+						:name="element.icon"
+						:class="`text-${element.color}-400 h-6 w-6`"
+					/>
+				</UTooltip>
 			</div>
-			<div
-				class="w-8 h-8 rotate-90 -mx-5 border-t-2 border-white"
-			>
-			</div>
+
+			<div class="w-8 h-8 rotate-90 -mx-5 border-t-2 border-white"></div>
 			<p
 				class="text-emerald-400 text-xs font-semibold -rotate-90 mt-6 -ml-5"
 			>
@@ -30,6 +30,7 @@ interface Element {
 	icon: string;
 	color: string;
 	url?: string;
+	name?: string;
 	callback?: () => void;
 }
 
