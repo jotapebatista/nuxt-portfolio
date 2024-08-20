@@ -1,75 +1,24 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to my Nuxt 3 portfolio! This is a personal portfolio built with Nuxt 3, showcasing my skills, projects, and achievements. It includes server-side functionality to interact with the Spotify API and display currently playing tracks.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- **Personal Portfolio:** Highlights skills, projects, and experience.
+- **Spotify Integration:** Displays currently playing tracks and top tracks using the Spotify API.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Dark Mode:** Toggle between light and dark themes.
 
-```bash
-# npm
-npm install
+## Tech Stack
 
-# pnpm
-pnpm install
+- **Frontend:** Nuxt 3, Vue 3, Tailwind CSS
+- **Backend:** Nuxt 3 Server API
+- **Spotify API:** For integrating and displaying Spotify data
 
-# yarn
-yarn install
+## Setup and Installation
 
-# bun
-bun install
-```
+### Prerequisites
 
-## Development Server
+- [Node.js](https://nodejs.org/) (version 16 or higher recommended)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
